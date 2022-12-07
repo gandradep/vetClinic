@@ -29,3 +29,19 @@ BEGIN;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
 COMMIT;
+
+/* Transaction delete all records and rollback */
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
+
+/* Transaction update weights to positive, create SAVEPOINT and COMMIT*/
+BEGIN;
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+SAVEPOINT NUM_ONE;
+UPDATE animals SET weight_kg=-1*weight_kg;
+ROLLBACK TO NUM_ONE;
+UPDATE animals SET weight_kg=-weight_kg WHERE weight_kg<0;
+COMMIT;
