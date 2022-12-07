@@ -16,3 +16,16 @@ SELECT * FROM animals WHERE  neutered = 't';
 SELECT * FROM animals WHERE NOT name = 'Gabumon';
 /* Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg) */
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+/* Transaction update animals table setting species column to unspecified. Verify and rollBack. */
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
+
+/* Transaction update species to pokemon or digimon and commit */
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+COMMIT;
