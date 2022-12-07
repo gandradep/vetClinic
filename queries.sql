@@ -47,9 +47,9 @@ UPDATE animals SET weight_kg=-weight_kg WHERE weight_kg<0;
 COMMIT;
 
 /* How many animals are there? 10 */
-SELECT * FROM animals;
+SELECT COUNT(*) FROM animals;
 /* How many animals have never tried to escape? 2 */
-SELECT * FROM animals WHERE escape_attempts = 0;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 /* What is the average weight of animals? 15.55kg*/
 SELECT AVG(weight_kg) FROM animals;
 /* Who escapes the mot, neutered or not neutered animals? neutered  */
