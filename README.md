@@ -62,11 +62,14 @@ Clone this repository to your desired folder.
 
 ### Usage
 
-This repository includes files with plain SQL that can be used to recreate a database:
+This repository includes files with plain SQL that can be used to recreate a database.:
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+
+You can see the database schema in the this [link](https://drawsql.app/teams/vetclinic/diagrams/vet-clinic
+).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
