@@ -80,6 +80,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
 - LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
 
+👤 **Kolapo Precious Akinrinlola**
+
+- GitHub: [LIBERCOSOFT](https://github.com/LIBERCOSOFT)
+- Twitter: [@Gerfieldt](https://twitter.com/Gerfieldt)
+- LinkedIn: [Kolapo Akinrinlola](https://linkedin.com/in/kolapo-akinrinlola-072097110)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

@@ -64,8 +64,17 @@ CREATE TABLE specializations (
 CREATE TABLE visits (
     id_vet INT,
     id_animal INT,
-    date_of_visit DATE, 
-    PRIMARY KEY (id_vet, id_animal, date_of_visit),
+    date_of_visit DATE,     
     FOREIGN KEY(id_vet) REFERENCES vets (id), 
     FOREIGN KEY(id_animal) REFERENCES animals (id)
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Create Index on the visits and owners table for persormance and lesser excution time
+CREATE INDEX id_animal_asc ON visits(id_animal ASC);
+CREATE INDEX vet_ind ON visits(id_vet ASC);
+CREATE INDEX email_index ON owners(email);
+
+
